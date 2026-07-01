@@ -42,18 +42,20 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          <img src="/images/logo.png" alt="Logo" className="navbar-logo" />
-        </a>
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=aakashsenthil006@gmail.com"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          aakashsenthil006@gmail.com
-        </a>
+        <div className="navbar-brand">
+          <a href="/#" className="navbar-title" data-cursor="disable">
+            <img src="/images/logo.png" alt="Logo" className="navbar-logo" />
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=aakashsenthil006@gmail.com"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="navbar-connect"
+            data-cursor="disable"
+          >
+            aakashsenthil006@gmail.com
+          </a>
+        </div>
         <ul>
           <li>
             <a data-href="#about" href="#about">
@@ -61,8 +63,18 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a data-href="#journey" href="#journey">
+              <HoverLinks text="JOURNEY" />
+            </a>
+          </li>
+          <li>
             <a data-href="#work" href="#work">
               <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#techstack" href="#techstack">
+              <HoverLinks text="TECHSTACK" />
             </a>
           </li>
           <li>

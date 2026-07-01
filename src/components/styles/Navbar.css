@@ -3,6 +3,7 @@
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0px;
   margin-bottom: -100px;
   box-sizing: border-box;
@@ -30,12 +31,13 @@
   font-weight: 600;
   cursor: pointer;
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 .navbar-connect {
-  position: absolute;
-  display: none;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
   font-size: 15px;
   letter-spacing: 1px;
   font-weight: 500;

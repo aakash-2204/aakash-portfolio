@@ -171,6 +171,7 @@ const TechStack = () => {
   return (
     <div
       ref={sectionRef}
+      id="techstack"
       className={`techstack ${isVisible ? "techstack-active" : ""}`}
     >
       <h2>

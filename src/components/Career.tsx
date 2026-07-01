@@ -41,7 +41,7 @@ const Career = () => {
   }, []);
 
   return (
-    <div className="career-section section-container">
+    <div className="career-section section-container" id="journey">
       <div className="career-container" ref={sectionRef}>
         <h2>
           My <span>Journey</span>
