@@ -66,6 +66,9 @@
   color: #f5f5f5;
   text-shadow: 0 0 24px rgba(245, 245, 245, 0.1);
 }
+.career-info h3 span {
+  color: var(--accentColor);
+}
 
 .career-info h4 {
   font-size: 33px;
