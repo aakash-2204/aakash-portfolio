@@ -38,7 +38,7 @@
   padding: 80px;
   display: flex;
   flex-direction: column;
-  width: 520px;
+  width: 560px;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
@@ -98,6 +98,31 @@
 
 .work-info > p {
   width: 90%;
+}
+
+.work-period {
+  font-size: 13px;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.work-description {
+  width: 100% !important;
+  line-height: 1.6;
+}
+
+.work-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accentColor);
+  font-size: 15px;
+  width: fit-content;
+}
+
+.work-repo-link:hover {
+  opacity: 0.8;
 }
 
 .work-image {
@@ -182,7 +207,7 @@
   }
 
   .work-box {
-    width: 350px;
+    width: 420px;
     padding: 30px;
   }
 

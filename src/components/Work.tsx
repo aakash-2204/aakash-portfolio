@@ -1,10 +1,40 @@
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { MdArrowOutward } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+const projects = [
+  {
+    name: "OracleFMCG",
+    category: "Cloud-Native AI Forecasting Platform",
+    period: "01/2026 – 05/2026",
+    description:
+      "AI-powered FMCG demand forecasting solution using LightGBM with SHAP explainability, served through FastAPI and Streamlit. Complete CI/CD pipeline with GitHub Actions, containerized with Docker, and deployed on Microsoft Azure with Prometheus and Grafana for real-time monitoring.",
+    tools: "Python, LightGBM, FastAPI, Streamlit, Docker, Azure, GitHub Actions, Prometheus, Grafana",
+    link: "",
+  },
+  {
+    name: "GigFlow",
+    category: "Smart Lead Management Dashboard",
+    period: "01/2026 – 02/2026",
+    description:
+      "Full-stack CRM dashboard for managing sales leads with secure JWT authentication and role-based access control. CRUD operations, search, filtering, pagination, and CSV export. Frontend deployed on Vercel, backend on Render.",
+    tools: "React, TypeScript, Node.js, Express.js, MongoDB",
+    link: "https://github.com/aakash-2204/Gigflow",
+  },
+  {
+    name: "SIMRRS",
+    category: "Smart Inventory Management Return Reduction System",
+    period: "10/2025 – 12/2025",
+    description:
+      "AI-driven fashion e-commerce solution using XGBoost for demand forecasting (R² = 0.90) and return prediction (60%+ accuracy) on 30K+ records. Interactive Streamlit dashboard to optimize inventory, reduce stockouts, and minimize return-related losses.",
+    tools: "Python, XGBoost, Streamlit, Pandas",
+    link: "",
+  },
+];
 
 const Work = () => {
   useGSAP(() => {
@@ -52,22 +82,35 @@ const Work = () => {
         </h2>
 
         <div className="work-flex">
-          {[...Array(6)].map((_value, index) => (
-            <div className="work-box" key={index}>
+          {projects.map((project, index) => (
+            <div className="work-box" key={project.name}>
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
                   <div>
-                    <h4>Project Name</h4>
-                    <p>Category</p>
+                    <h4>{project.name}</h4>
+                    <p>{project.category}</p>
                   </div>
                 </div>
 
-                <h4>Tools and features</h4>
-                <p>Javascript, TypeScript, React, Threejs</p>
-              </div>
+                <p className="work-period">{project.period}</p>
+                <p className="work-description">{project.description}</p>
 
-              <WorkImage image="/images/placeholder.webp" alt="" />
+                <h4>Tools and features</h4>
+                <p>{project.tools}</p>
+
+                {project.link && (
+                  <a
+                    className="work-repo-link"
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-cursor={"disable"}
+                  >
+                    View on GitHub <MdArrowOutward />
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
